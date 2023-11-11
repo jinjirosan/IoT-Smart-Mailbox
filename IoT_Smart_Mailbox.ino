@@ -1,9 +1,28 @@
 /*
-  SigFox Event Trigger tutorial
-  This sketch demonstrates the usage of a MKRFox1200
-  to build a battery-powered alarm sensor with email notifications
-  A couple of sensors (normally open) should we wired between pins 1 and 2 and GND.
-  This example code is in the public domain.
+Project IoT Smart Mailbox a.k.a. Bernard de Brievenbuschecker                                                                             
+                                                                  _______       
+/|              __.....__                _..._                    \  ___ `'.    
+||          .-''         '.            .'     '.                   ' |--.\  \   
+||         /     .-''"'-.  `. .-,.--. .   .-.   .          .-,.--. | |    \  '  
+||  __    /     /________\   \|  .-. ||  '   '  |    __    |  .-. || |     |  ' 
+||/'__ '. |                  || |  | ||  |   |  | .:--.'.  | |  | || |     |  | 
+|:/`  '. '\    .-------------'| |  | ||  |   |  |/ |   \ | | |  | || |     ' .' 
+||     | | \    '-.____...---.| |  '- |  |   |  |`" __ | | | |  '- | |___.' /'  
+||\    / '  `.             .' | |     |  |   |  | .'.''| | | |    /_______.'/   
+|/\'..' /     `''-...... -'   | |     |  |   |  |/ /   | |_| |    \_______|/    
+'  `'-'`  you've got mail     |_|     |  |   |  |\ \._,\ '/|_|                  
+                                      '--'   '--' `--'  `"                      
+
+hardware platform  : Arduino MKR FOX 1200
+                   : Atmel SAMD21 Cortex-M0+ (32bit low power ARM MCU)
+                   : ATA8520 SigFox Module
+
+Power              : Dual AA with battery monitor
+codebase           : C
+
+(2023) JinjiroSan
+IoT_Smart_mailbox.ino : v2.1 - IR Break Beam Edition - refactor c0.0.1
+
 */
 
 #include <SigFox.h>
@@ -45,16 +64,16 @@ void setup() {
     SigFox.debug();
   }
 
-  // attach pin 1 to a switch and enable the interrupt on voltage rising event
-
+  // attach pin 1 to IR Break Beam sensor for mail detection (mail in). Interrupt on voltage FALLING event.
   pinMode(1, INPUT_PULLUP);
-  LowPower.attachInterruptWakeup(1, alarmEvent1, RISING);
+  LowPower.attachInterruptWakeup(1, alarmEvent1, FALLING);
 
+// attach pin 0 to REED magnet contact for the inner door (mail out). Interrupt on voltage RISING event.
   pinMode(0, INPUT_PULLUP);
   LowPower.attachInterruptWakeup(0, alarmEvent2, RISING);
 }
 
-
+// mail-in detection
 void alarmEvent1() {
   alarm_source = 1;
 
@@ -75,7 +94,7 @@ void alarmEvent1() {
   analogReference(AR_DEFAULT);
 }
 
-
+//mail-out detection
 void alarmEvent2() {
   alarm_source = 2;
 
