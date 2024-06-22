@@ -29,6 +29,7 @@ Hardware platform
  
 Power              
 * 3.7v - 4400 mAh (dual 18650) LiPo
+
 Codebase           
 * MicroPython 1.22
 
