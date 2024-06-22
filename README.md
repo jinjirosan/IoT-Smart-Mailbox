@@ -20,14 +20,17 @@ This is version 3.x utilizing a VCNL4040 Proximity Sensor on the floor of the ma
 
 # The platform
 
-Hardware platform  : Pimoroni Pici Lipo
-                   : Dual ARM Cortex M0+ running at up to 133Mhz
-                   : VCNL4040 Proximity sensor
-                   : LPWAN SFM10R1 SigFox Module
-                   : REED switch (inner door)
+Hardware platform  
+* Pimoroni Pici Lipo
+* Dual ARM Cortex M0+ running at up to 133Mhz
+* VCNL4040 Proximity sensor
+* LPWAN SFM10R1 SigFox Module
+* REED switch (inner door)
  
-Power              : 3.7v - 4400 mAh (dual 18650) LiPo
-Codebase           : MicroPython 1.22
+Power              
+* 3.7v - 4400 mAh (dual 18650) LiPo
+Codebase           
+* MicroPython 1.22
 
 # Console log
 
