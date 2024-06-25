@@ -82,4 +82,4 @@ The global 0G Network, powered by Sigfox 0G technology, is a low power wide area
 The Sigfox backend receives the (max) 12-byte message almost instantly and proces the callback, in this case over email.
 
 ![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/Sigfox01.png)
-![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/Sigfox02.png)
+![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/Sigfox03.png)
