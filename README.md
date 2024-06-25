@@ -13,6 +13,10 @@ The mailbox has an outward going flap and the opening is just wide enough for th
 
 This is version 3.x utilizing a VCNL4040 Proximity Sensor on the floor of the mailbox.
 
+![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/IMG_9441.jpeg)
+
+![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/IMG_9446.jpeg)
+
 # How it works
 
 - The "mail-in" detection is a proximity sensor circuit mounted in the middle of the floor of the mailbox so nothing is attached on the flap and nothing is in the way of the incomming mail path. When a letter or package is dropped, the distance to the proximity sensor is shortened and an alert is sent.
