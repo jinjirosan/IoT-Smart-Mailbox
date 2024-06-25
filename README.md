@@ -25,9 +25,9 @@ This is version 3.x utilizing a VCNL4040 Proximity Sensor on the floor of the ma
 # The platform
 
 Hardware platform  
-* Pimoroni Pici Lipo
+* Pimoroni Pico Lipo
 * Dual ARM Cortex M0+ running at up to 133Mhz
-* VCNL4040 Proximity sensor
+* VCNL4040 Proximity sensor (outer door)
 * LPWAN SFM10R1 SigFox Module
 * REED switch (inner door)
  
