@@ -2,9 +2,9 @@
 
 Living in an apartment is great however you don't really have a view on your mailbox which is downstairs in the lobby. So to minimize a failed trip to an empty mailbox I've created a mailbox checker.
 
-There are two detection circtuis:
-- mail-in : for any new mail a notfication is send by email and a envelope icon is displayed on the Magic Mirror.
-- mail-out: so if someone from the house already pciked up the mail everyone is notified by email and the envelope icon is removed from the Magic Mirror
+There are two detection circuits:
+- **mail-in** : for any new mail a notfication is send by email and a envelope icon is displayed on the Magic Mirror.
+- **mail-out**: so if someone from the house already pciked up the mail everyone is notified by email and the envelope icon is removed from the Magic Mirror
 
 The mailbox is to far down (or we live to far up), there is no normal wifi connectivity. I'm using a SigFox module to send the notification to the SigFox Network over 868Mhz which in turn sends the email/notification to us. The cool thing is, this works regardless of my house IoT is operational.
 
