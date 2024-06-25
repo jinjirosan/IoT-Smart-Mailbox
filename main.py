@@ -12,9 +12,9 @@
 # '  `'-'`  you've got mail     |_|     |  |   |  |\ \._,\ '/|_|                  
 #                                       '--'   '--' `--'  `"                      
 # 
-# hardware platform  : Pimoroni Pici Lipo
+# hardware platform  : Pimoroni Pico Lipo
 #                    : Dual ARM Cortex M0+ running at up to 133Mhz
-#                    : VCNL4040 Proximity sensor
+#                    : VCNL4040 Proximity sensor (outer door)
 #                    : LPWAN SFM10R1 SigFox Module
 #                    : REED switch (inner door)
 # 
@@ -22,7 +22,7 @@
 # codebase           : MicroPython 1.22
 # 
 # (2024) JinjiroSan
-# Bernard-de-Brievenbuschecker.py : v3.4 - refactor c0.0.1
+# Bernard-de-Brievenbuschecker.py : v3.4 - refactor c0.0.2
 #
 
 from machine import Pin, ADC, I2C, lightsleep, UART
