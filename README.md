@@ -6,7 +6,7 @@ There are two detection circtuis:
 - mail-in : for any new mail a notfication is send by email and a envelope icon is displayed on the Magic Mirror.
 - mail-out: so if someone from the house already pciked up the mail everyone is notified by email and the envelope icon is removed from the Magic Mirror
 
-The mailbox is to far down (or we live to far up), there is no normal wifi connectivity. I'm using a SigFox module to send the notification to the SigFox Network which in turn sends the email/notification to us. The cool thing is, this works regardless of my house IoT is operational.
+The mailbox is to far down (or we live to far up), there is no normal wifi connectivity. I'm using a SigFox module to send the notification to the SigFox Network over 868Mhz which in turn sends the email/notification to us. The cool thing is, this works regardless of my house IoT is operational.
 
 The mailbox has an outward going flap and the opening is just wide enough for the widest specified mail. I've had the magnet (hardware platform 1.x) on the flap knocked off multiple times by the mailman due to bol.com book packages are exactly the width of the opening. Need something else.
 ~~This is version 2.x utilizing an IR Break Beam circuit instead of a REED magnet contact.~~ 
@@ -75,3 +75,11 @@ Sigfox message sent successfully.
 Mail detection reset.
 Door closed! Detected change on pin: Pin(GPIO8, mode=IN, pull=PULL_UP)
 ```
+
+# Sigfox backend
+The global 0G Network, powered by Sigfox 0G technology, is a low power wide area network (LPWAN) dedicated to Massive IoT. It is designed to connect devices securely at low cost in the most energy-efficient way.
+
+The Sigfox backend receives the (max) 12-byte message almost instantly and proces the callback, in this case over email.
+
+![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/Sigfox01.png)
+![BernarddeBrievenbuschecker](https://github.com/jinjirosan/IoT-Smart-Mailbox/blob/main/images/Sigfox02.png)
